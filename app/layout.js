@@ -1,43 +1,28 @@
 //imoirtar link(esto es de react)
-import Link from "next/link"
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-const linksMenu = [
-  {
-    label: 'Home',
-    route: '/'
-  },
-  {
-    label: 'Services',
-    route: '/services'
-  },
-  {
-    label: 'About Us',
-    route: '/AboutUs'
-  },
-  {
-    label: 'Contact',
-    route: '/contact'
-  }
-
-]
-
-export default function RootLayout({ children }) {
+function App() {
   return (
-    <html>
-      <head>
-        <title>My first app with next</title>
-      </head>
-      <nav>
-        <ul>
-          {linksMenu.map(({ label, route }) => (
-            <li>
-              <Link href={route}> {label}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <body>{children}</body>
-    </html>
-  )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
+
+export default App;
 //aqui va el menú
